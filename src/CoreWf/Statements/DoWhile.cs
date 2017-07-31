@@ -4,6 +4,7 @@
 using CoreWf.Expressions;
 using CoreWf.Runtime;
 using CoreWf.Runtime.Collections;
+using Portable.Xaml.Markup;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -11,7 +12,7 @@ using System.Linq.Expressions;
 
 namespace CoreWf.Statements
 {
-    //[ContentProperty("Body")]
+    [ContentProperty("Body")]
     public sealed class DoWhile : NativeActivity
     {
         private CompletionCallback _onBodyComplete;
@@ -69,7 +70,7 @@ namespace CoreWf.Statements
         }
 
         [DefaultValue(null)]
-        //[DependsOn("Variables")]
+        [DependsOn("Variables")]
         public Activity<bool> Condition
         {
             get;
@@ -77,7 +78,7 @@ namespace CoreWf.Statements
         }
 
         [DefaultValue(null)]
-        //[DependsOn("Condition")]
+        [DependsOn("Condition")]
         public Activity Body
         {
             get;

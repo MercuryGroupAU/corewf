@@ -4,12 +4,13 @@
 using CoreWf.Runtime;
 using CoreWf.Runtime.Collections;
 using CoreWf.Validation;
+using Portable.Xaml.Markup;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 
 namespace CoreWf.Statements
 {
-    //[ContentProperty("Branches")]
+    [ContentProperty("Branches")]
     public sealed class Pick : NativeActivity
     {
         private const string pickStateProperty = "CoreWf.Statements.Pick.PickState";

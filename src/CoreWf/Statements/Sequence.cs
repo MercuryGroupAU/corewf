@@ -2,11 +2,12 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using CoreWf.Runtime.Collections;
+using Portable.Xaml.Markup;
 using System.Collections.ObjectModel;
 
 namespace CoreWf.Statements
 {
-    //[ContentProperty("Activities")]
+    [ContentProperty("Activities")]
     public sealed class Sequence : NativeActivity
     {
         private Collection<Activity> _activities;
@@ -43,7 +44,7 @@ namespace CoreWf.Statements
             }
         }
 
-        //[DependsOn("Variables")]
+        [DependsOn("Variables")]
         public Collection<Activity> Activities
         {
             get

@@ -1,6 +1,7 @@
 // Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using Portable.Xaml.Markup;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -77,7 +78,7 @@ namespace CoreWf.Validation
         protected abstract void OnExecute(NativeActivityContext context, object objectToValidate, ValidationContext objectToValidateContext);
     }
 
-    //[ContentProperty("Body")]
+    [ContentProperty("Body")]
     public sealed class Constraint<T> : Constraint
     {
         public Constraint()

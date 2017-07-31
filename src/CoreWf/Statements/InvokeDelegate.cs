@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using CoreWf.Runtime;
+using Portable.Xaml.Markup;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -11,7 +12,7 @@ namespace CoreWf.Statements
 {
     //[SuppressMessage(FxCop.Category.Naming, FxCop.Rule.IdentifiersShouldNotHaveIncorrectSuffix,
     //Justification = "Approved Workflow naming")]
-    //[ContentProperty("Delegate")]
+    [ContentProperty("Delegate")]
     public sealed class InvokeDelegate : NativeActivity
     {
         private IDictionary<string, Argument> _delegateArguments;

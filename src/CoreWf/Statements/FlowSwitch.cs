@@ -3,12 +3,13 @@
 
 using CoreWf.Runtime;
 using CoreWf.Runtime.Collections;
+using Portable.Xaml.Markup;
 using System.Collections.Generic;
 using System.ComponentModel;
 
 namespace CoreWf.Statements
 {
-    //[ContentProperty("Cases")]
+    [ContentProperty("Cases")]
     public sealed class FlowSwitch<T> : FlowNode, IFlowSwitch
     {
         private const string DefaultDisplayName = "Switch";

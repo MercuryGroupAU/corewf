@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using CoreWf.Expressions;
+using Portable.Xaml.Markup;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -49,7 +50,7 @@ namespace CoreWf.Statements
         }
 
         [DefaultValue(null)]
-        //[DependsOn("Condition")]
+        [DependsOn("Condition")]
         public FlowNode True
         {
             get;
@@ -57,7 +58,7 @@ namespace CoreWf.Statements
         }
 
         [DefaultValue(null)]
-        //[DependsOn("True")]
+        [DependsOn("True")]
         public FlowNode False
         {
             get;

@@ -3,6 +3,7 @@
 
 using CoreWf.Runtime;
 using CoreWf.Runtime.Collections;
+using Portable.Xaml.Markup;
 using System;
 using System.Collections.ObjectModel;
 using System.Reflection;
@@ -14,7 +15,7 @@ namespace CoreWf.Expressions
     //Justification = "Optimizing for XAML naming. VB imperative users will [] qualify (e.g. New [New])")]
     //[SuppressMessage(FxCop.Category.Naming, FxCop.Rule.IdentifiersShouldNotHaveIncorrectSuffix,
     //Justification = "Optimizing for XAML naming.")]
-    //[ContentProperty("Arguments")]
+    [ContentProperty("Arguments")]
     public sealed class New<TResult> : CodeActivity<TResult>
     {
         private Collection<Argument> _arguments;

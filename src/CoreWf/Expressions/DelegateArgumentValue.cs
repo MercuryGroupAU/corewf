@@ -2,10 +2,11 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using CoreWf.Runtime;
+using Portable.Xaml.Markup;
 
 namespace CoreWf.Expressions
 {
-    //[ContentProperty("DelegateArgument")]
+    [ContentProperty("DelegateArgument")]
     public sealed class DelegateArgumentValue<T> : EnvironmentLocationValue<T>
     {
         public DelegateArgumentValue()

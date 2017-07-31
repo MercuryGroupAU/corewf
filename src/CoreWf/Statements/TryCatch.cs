@@ -3,6 +3,7 @@
 
 using CoreWf.Runtime;
 using CoreWf.Runtime.Collections;
+using Portable.Xaml.Markup;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -52,14 +53,14 @@ namespace CoreWf.Statements
         }
 
         [DefaultValue(null)]
-        //[DependsOn("Variables")]
+        [DependsOn("Variables")]
         public Activity Try
         {
             get;
             set;
         }
 
-        //[DependsOn("Try")]
+        [DependsOn("Try")]
         public Collection<Catch> Catches
         {
             get
@@ -73,7 +74,7 @@ namespace CoreWf.Statements
         }
 
         [DefaultValue(null)]
-        //[DependsOn("Catches")]
+        [DependsOn("Catches")]
         public Activity Finally
         {
             get;

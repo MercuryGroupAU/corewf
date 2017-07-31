@@ -1,6 +1,7 @@
 // Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using Portable.Xaml.Markup;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -58,7 +59,7 @@ namespace CoreWf.Statements
         }
 
         [DefaultValue(null)]
-        //[DependsOn("Condition")]
+        [DependsOn("Condition")]
         public Activity Then
         {
             get;
@@ -66,7 +67,7 @@ namespace CoreWf.Statements
         }
 
         [DefaultValue(null)]
-        //[DependsOn("Then")]
+        [DependsOn("Then")]
         public Activity Else
         {
             get;

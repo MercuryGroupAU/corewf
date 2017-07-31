@@ -3,6 +3,7 @@
 
 using CoreWf.Runtime;
 using CoreWf.Runtime.Collections;
+using Portable.Xaml.Markup;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -10,7 +11,7 @@ using System.Runtime.Serialization;
 
 namespace CoreWf.Expressions
 {
-    //[ContentProperty("Indices")]
+    [ContentProperty("Indices")]
     public sealed class MultidimensionalArrayItemReference<TItem> : CodeActivity<Location<TItem>>
     {
         private Collection<InArgument<int>> _indices;

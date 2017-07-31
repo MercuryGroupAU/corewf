@@ -3,6 +3,7 @@
 
 using CoreWf.Runtime;
 using CoreWf.Runtime.Collections;
+using Portable.Xaml.Markup;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,7 +12,7 @@ using System.Linq;
 
 namespace CoreWf.Statements
 {
-    //[ContentProperty("Nodes")]
+    [ContentProperty("Nodes")]
     public sealed class Flowchart : NativeActivity
     {
         private Collection<Variable> _variables;
@@ -57,14 +58,14 @@ namespace CoreWf.Statements
             }
         }
 
-        //[DependsOn("Variables")]
+        [DependsOn("Variables")]
         public FlowNode StartNode
         {
             get;
             set;
         }
 
-        //[DependsOn("StartNode")]
+        [DependsOn("StartNode")]
         public Collection<FlowNode> Nodes
         {
             get

@@ -2,12 +2,13 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using CoreWf.Runtime.Collections;
+using Portable.Xaml.Markup;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 
 namespace CoreWf.Statements
 {
-    //[ContentProperty("Branches")]
+    [ContentProperty("Branches")]
     public sealed class Parallel : NativeActivity
     {
         private CompletionCallback<bool> _onConditionComplete;
@@ -44,14 +45,14 @@ namespace CoreWf.Statements
         }
 
         [DefaultValue(null)]
-        //[DependsOn("Variables")]
+        [DependsOn("Variables")]
         public Activity<bool> CompletionCondition
         {
             get;
             set;
         }
 
-        //[DependsOn("CompletionCondition")]
+        [DependsOn("CompletionCondition")]
         public Collection<Activity> Branches
         {
             get

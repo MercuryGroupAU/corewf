@@ -3,6 +3,8 @@
 
 using CoreWf.Expressions;
 using CoreWf.Runtime;
+using CoreWf.XamlIntegration;
+using Portable.Xaml.Markup;
 using System;
 using System.ComponentModel;
 using System.Linq.Expressions;
@@ -35,9 +37,9 @@ namespace CoreWf
         }
     }
 
-    //[ContentProperty("Expression")]
-    //[TypeConverter(typeof(InOutArgumentConverter))]
-    //[ValueSerializer(typeof(ArgumentValueSerializer))]
+    [ContentProperty("Expression")]
+    [TypeConverter(typeof(InOutArgumentConverter))]
+    [ValueSerializer(typeof(ArgumentValueSerializer))]
     public sealed class InOutArgument<T> : InOutArgument
     {
         public InOutArgument(Variable variable)

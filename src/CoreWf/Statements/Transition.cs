@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using Portable.Xaml.Markup;
 using System.ComponentModel;
 
 namespace CoreWf.Statements
@@ -14,7 +15,7 @@ namespace CoreWf.Statements
         /// Gets or sets the Action activity which should be executed when the Transtion is taken.
         /// It's optional.
         /// </summary>
-        //[DependsOn("To")]
+        [DependsOn("To")]
         [DefaultValue(null)]
         public Activity Action
         {
@@ -27,7 +28,7 @@ namespace CoreWf.Statements
         /// It's optional. 
         /// If the Condition is null, the Transition would always be taken when the Trigger activity is completed.
         /// </summary>
-        //[DependsOn("Action")]
+        [DependsOn("Action")]
         [DefaultValue(null)]
         public Activity<bool> Condition
         {
@@ -48,7 +49,7 @@ namespace CoreWf.Statements
         /// Gets or sets the target State of the Transition.
         /// It's required.
         /// </summary>
-        //[DependsOn("Trigger")]
+        [DependsOn("Trigger")]
         [DefaultValue(null)]
         public State To
         {

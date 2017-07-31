@@ -2,11 +2,12 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using CoreWf.Runtime;
+using Portable.Xaml.Markup;
 using System.Collections.ObjectModel;
 
 namespace CoreWf.Statements
 {
-    //[ContentProperty("Body")]
+    [ContentProperty("Body")]
     public sealed class HandleScope<THandle> : NativeActivity
         where THandle : Handle
     {

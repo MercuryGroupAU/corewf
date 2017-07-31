@@ -2,12 +2,13 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using CoreWf.Runtime.Collections;
+using Portable.Xaml.Markup;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 
 namespace CoreWf.Statements
 {
-    //[ContentProperty("Action")]
+    [ContentProperty("Action")]
     public sealed class PickBranch
     {
         private Collection<Variable> _variables;
@@ -41,11 +42,11 @@ namespace CoreWf.Statements
         }
 
         [DefaultValue(null)]
-        //[DependsOn("Variables")]
+        [DependsOn("Variables")]
         public Activity Trigger { get; set; }
 
         [DefaultValue(null)]
-        //[DependsOn("Trigger")]
+        [DependsOn("Trigger")]
         public Activity Action { get; set; }
 
         [DefaultValue("PickBranch")]

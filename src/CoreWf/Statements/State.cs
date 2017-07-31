@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using CoreWf.Runtime.Collections;
+using Portable.Xaml.Markup;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -42,7 +43,7 @@ namespace CoreWf.Statements
         /// Gets or sets exit action of the State. It is executed when the StateMachine leaves the State. 
         /// It's optional.
         /// </summary>
-        //[DependsOn("Entry")]
+        [DependsOn("Entry")]
         [DefaultValue(null)]
         public Activity Exit
         {
@@ -54,7 +55,7 @@ namespace CoreWf.Statements
         /// <summary>
         /// Gets Transitions collection contains all outgoing Transitions from the State.
         /// </summary>
-        //[DependsOn("Exit")]
+        [DependsOn("Exit")]
         public Collection<Transition> Transitions
         {
             get
@@ -81,7 +82,7 @@ namespace CoreWf.Statements
         /// <summary>
         /// Gets Variables which can be used within the scope of State and its Transitions collection.
         /// </summary>
-        //[DependsOn("Transitions")]
+        [DependsOn("Transitions")]
         public Collection<Variable> Variables
         {
             get

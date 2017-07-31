@@ -1,12 +1,13 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using Portable.Xaml.Markup;
 using System.Collections.Generic;
 using System.ComponentModel;
 
 namespace CoreWf.Statements
 {
-    //[ContentProperty("Action")]
+    [ContentProperty("Action")]
     public sealed class FlowStep : FlowNode
     {
         public FlowStep()
@@ -21,7 +22,7 @@ namespace CoreWf.Statements
         }
 
         [DefaultValue(null)]
-        //[DependsOn("Action")]
+        [DependsOn("Action")]
         public FlowNode Next
         {
             get;

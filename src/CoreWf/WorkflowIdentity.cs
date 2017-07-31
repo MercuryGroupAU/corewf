@@ -3,6 +3,7 @@
 
 using CoreWf.Runtime;
 using System;
+using System.ComponentModel;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Text.RegularExpressions;

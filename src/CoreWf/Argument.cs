@@ -3,6 +3,8 @@
 
 using CoreWf.Runtime;
 using CoreWf.Validation;
+using CoreWf.XamlIntegration;
+using Portable.Xaml.Markup;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -140,36 +142,36 @@ namespace CoreWf
         }
 
         // for ArgumentValueSerializer
-        //internal bool CanConvertToString(IValueSerializerContext context)
-        //{
-        //    if (this.WasDesignTimeNull)
-        //    {
-        //        return true;
-        //    }            
-        //    else
-        //    {
-        //        if (this.EvaluationOrder == Argument.UnspecifiedEvaluationOrder)
-        //        {
-        //            return ActivityWithResultValueSerializer.CanConvertToStringWrapper(this.Expression, context);
-        //        }
-        //        else
-        //        {
-        //            return false;
-        //        }
-        //    }
-        //}
+        internal bool CanConvertToString(IValueSerializerContext context)
+        {
+            if (this.WasDesignTimeNull)
+            {
+                return true;
+            }
+            else
+            {
+                if (this.EvaluationOrder == Argument.UnspecifiedEvaluationOrder)
+                {
+                    return ActivityWithResultValueSerializer.CanConvertToStringWrapper(this.Expression, context);
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
 
-        //internal string ConvertToString(IValueSerializerContext context)
-        //{
-        //    if (this.WasDesignTimeNull)
-        //    {
-        //        // this argument instance was artificially created by the runtime
-        //        // to Xaml, this should appear as {x:Null}
-        //        return null;
-        //    }
+        internal string ConvertToString(IValueSerializerContext context)
+        {
+            if (this.WasDesignTimeNull)
+            {
+                // this argument instance was artificially created by the runtime
+                // to Xaml, this should appear as {x:Null}
+                return null;
+            }
 
-        //    return ActivityWithResultValueSerializer.ConvertToStringWrapper(this.Expression, context);
-        //}
+            return ActivityWithResultValueSerializer.ConvertToStringWrapper(this.Expression, context);
+        }
 
         internal static void Bind(Argument binding, RuntimeArgument argument)
         {

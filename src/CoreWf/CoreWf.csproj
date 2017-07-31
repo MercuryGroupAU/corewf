@@ -1,17 +1,43 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.3</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <Title>Core WF</Title>
     <Description>Unofficial port of the Windows Workflow Foundation (WF) to the .NET Standard</Description>
     <Authors>Dustin Metzgar,Jim Carley</Authors>
-    <Copyright>Copyright &#169; Dustin Metzgar 2017</Copyright> 
+    <Copyright>Copyright © Dustin Metzgar 2017</Copyright> 
     <PackageTags>.NET Core workflow</PackageTags>
     <PackageProjectUrl>https://github.com/dmetzgar/corewf</PackageProjectUrl>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="XamlIntegration\Unused\**" />
+    <EmbeddedResource Remove="XamlIntegration\Unused\**" />
+    <None Remove="XamlIntegration\Unused\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="XamlIntegration\CompiledDataContext.cs" />
+    <Compile Remove="XamlIntegration\CompiledLocation.cs" />
+    <Compile Remove="XamlIntegration\ConcatenatingXamlReader.cs" />
+    <Compile Remove="XamlIntegration\DynamicUpdateMapConverter.cs" />
+    <Compile Remove="XamlIntegration\DynamicUpdateMapExtension.cs" />
+    <Compile Remove="XamlIntegration\DynamicUpdateMapItemConverter.cs" />
+    <Compile Remove="XamlIntegration\ExpressionTreeRewriter.cs" />
+    <Compile Remove="XamlIntegration\ICompiledExpressionRoot.cs" />
+    <Compile Remove="XamlIntegration\ImplementationVersionConverter.cs" />
+    <Compile Remove="XamlIntegration\NetDataContractXmlSerializable.cs" />
+    <Compile Remove="XamlIntegration\SerializableFuncDeferringLoader.cs" />
+    <Compile Remove="XamlIntegration\TextExpressionCompiler.cs" />
+    <Compile Remove="XamlIntegration\TextExpressionCompilerError.cs" />
+    <Compile Remove="XamlIntegration\TextExpressionCompilerHelper.cs" />
+    <Compile Remove="XamlIntegration\TextExpressionCompilerResults.cs" />
+    <Compile Remove="XamlIntegration\WorkflowIdentityConverter.cs" />
+  </ItemGroup>
   
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="Portable.Xaml" Version="0.16.0" />
     <PackageReference Include="System.ComponentModel.EventBasedAsync" Version="4.3.0" />
     <PackageReference Include="System.Linq.Expressions" Version="4.3.0" />
     <PackageReference Include="System.Reflection.TypeExtensions" Version="4.3.0" />

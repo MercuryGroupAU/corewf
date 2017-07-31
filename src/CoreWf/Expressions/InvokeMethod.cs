@@ -9,10 +9,11 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Reflection;
 using System.Threading;
+using Portable.Xaml.Markup;
 
 namespace CoreWf.Expressions
 {
-    //[ContentProperty("Parameters")]
+    [ContentProperty("Parameters")]
     public sealed class InvokeMethod<TResult> : AsyncCodeActivity<TResult>
     {
         private Collection<Argument> _parameters;

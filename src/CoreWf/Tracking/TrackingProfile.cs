@@ -1,12 +1,13 @@
 // Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using Portable.Xaml.Markup;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 
 namespace CoreWf.Tracking
 {
-    //[ContentProperty("Queries")]
+    [ContentProperty("Queries")]
     public class TrackingProfile
     {
         private Collection<TrackingQuery> _queries;

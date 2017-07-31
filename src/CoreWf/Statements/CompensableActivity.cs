@@ -5,6 +5,7 @@ using CoreWf.Expressions;
 using CoreWf.Runtime;
 using CoreWf.Runtime.Collections;
 using CoreWf.Validation;
+using Portable.Xaml.Markup;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -14,7 +15,7 @@ using System.Linq;
 namespace CoreWf.Statements
 {
 
-    //[ContentProperty("Body")]
+    [ContentProperty("Body")]
     public sealed class CompensableActivity : NativeActivity<CompensationToken>
     {
         private static Constraint s_noCompensableActivityInSecondaryRoot = CompensableActivity.NoCompensableActivityInSecondaryRoot();
@@ -60,7 +61,7 @@ namespace CoreWf.Statements
         }
 
         [DefaultValue(null)]
-        //[DependsOn("Variables")]
+        [DependsOn("Variables")]
         public Activity Body
         {
             get;
@@ -68,7 +69,7 @@ namespace CoreWf.Statements
         }
 
         [DefaultValue(null)]
-        //[DependsOn("Body")]
+        [DependsOn("Body")]
         public Activity CancellationHandler
         {
             get;
@@ -76,7 +77,7 @@ namespace CoreWf.Statements
         }
 
         [DefaultValue(null)]
-        //[DependsOn("CancellationHandler")]
+        [DependsOn("CancellationHandler")]
         public Activity CompensationHandler
         {
             get;
@@ -84,7 +85,7 @@ namespace CoreWf.Statements
         }
 
         [DefaultValue(null)]
-        //[DependsOn("CompensationHandler")]
+        [DependsOn("CompensationHandler")]
         public Activity ConfirmationHandler
         {
             get;

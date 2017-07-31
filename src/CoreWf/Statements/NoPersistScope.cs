@@ -3,6 +3,7 @@
 
 using CoreWf.Runtime;
 using CoreWf.Validation;
+using Portable.Xaml.Markup;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -10,7 +11,7 @@ using System.Linq;
 
 namespace CoreWf.Statements
 {
-    //[ContentProperty("Body")]
+    [ContentProperty("Body")]
     public sealed class NoPersistScope : NativeActivity
     {
         private static Constraint s_constraint;

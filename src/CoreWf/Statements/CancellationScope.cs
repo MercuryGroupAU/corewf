@@ -2,13 +2,14 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using CoreWf.Runtime.Collections;
+using Portable.Xaml.Markup;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 
 namespace CoreWf.Statements
 {
-    //[ContentProperty("Body")]
+    [ContentProperty("Body")]
     public sealed class CancellationScope : NativeActivity
     {
         private Collection<Variable> _variables;
@@ -43,7 +44,7 @@ namespace CoreWf.Statements
         }
 
         [DefaultValue(null)]
-        //[DependsOn("Variables")]
+        [DependsOn("Variables")]
         public Activity Body
         {
             get;
@@ -51,7 +52,7 @@ namespace CoreWf.Statements
         }
 
         [DefaultValue(null)]
-        //[DependsOn("Body")]
+        [DependsOn("Body")]
         public Activity CancellationHandler
         {
             get;

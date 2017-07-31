@@ -2,13 +2,14 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using CoreWf.Runtime.Collections;
+using Portable.Xaml.Markup;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 
 namespace CoreWf.Statements
 {
-    //[ContentProperty("Action")]
+    [ContentProperty("Action")]
     public sealed class InvokeAction : NativeActivity
     {
         private IList<Argument> _actionArguments;
@@ -51,7 +52,7 @@ namespace CoreWf.Statements
         }
     }
 
-    //[ContentProperty("Action")]
+    [ContentProperty("Action")]
     public sealed class InvokeAction<T> : NativeActivity
     {
         public InvokeAction()
@@ -98,7 +99,7 @@ namespace CoreWf.Statements
         }
     }
 
-    //[ContentProperty("Action")]
+    [ContentProperty("Action")]
     public sealed class InvokeAction<T1, T2> : NativeActivity
     {
         public InvokeAction()
@@ -155,7 +156,7 @@ namespace CoreWf.Statements
         }
     }
 
-    //[ContentProperty("Action")]
+    [ContentProperty("Action")]
     public sealed class InvokeAction<T1, T2, T3> : NativeActivity
     {
         public InvokeAction()
@@ -221,7 +222,7 @@ namespace CoreWf.Statements
         }
     }
 
-    //[ContentProperty("Action")]
+    [ContentProperty("Action")]
     public sealed class InvokeAction<T1, T2, T3, T4> : NativeActivity
     {
         public InvokeAction()
@@ -297,7 +298,7 @@ namespace CoreWf.Statements
         }
     }
 
-    //[ContentProperty("Action")]
+    [ContentProperty("Action")]
     public sealed class InvokeAction<T1, T2, T3, T4, T5> : NativeActivity
     {
         public InvokeAction()
@@ -382,7 +383,7 @@ namespace CoreWf.Statements
         }
     }
 
-    //[ContentProperty("Action")]
+    [ContentProperty("Action")]
     public sealed class InvokeAction<T1, T2, T3, T4, T5, T6> : NativeActivity
     {
         public InvokeAction()
@@ -476,7 +477,7 @@ namespace CoreWf.Statements
         }
     }
 
-    //[ContentProperty("Action")]
+    [ContentProperty("Action")]
     public sealed class InvokeAction<T1, T2, T3, T4, T5, T6, T7> : NativeActivity
     {
         public InvokeAction()
@@ -579,7 +580,7 @@ namespace CoreWf.Statements
         }
     }
 
-    //[ContentProperty("Action")]
+    [ContentProperty("Action")]
     public sealed class InvokeAction<T1, T2, T3, T4, T5, T6, T7, T8> : NativeActivity
     {
         public InvokeAction()
@@ -692,7 +693,7 @@ namespace CoreWf.Statements
         }
     }
 
-    //[ContentProperty("Action")]
+    [ContentProperty("Action")]
     public sealed class InvokeAction<T1, T2, T3, T4, T5, T6, T7, T8, T9> : NativeActivity
     {
         public InvokeAction()
@@ -814,7 +815,7 @@ namespace CoreWf.Statements
         }
     }
 
-    //[ContentProperty("Action")]
+    [ContentProperty("Action")]
     public sealed class InvokeAction<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> : NativeActivity
     {
         public InvokeAction()
@@ -945,7 +946,7 @@ namespace CoreWf.Statements
         }
     }
 
-    //[ContentProperty("Action")]
+    [ContentProperty("Action")]
     public sealed class InvokeAction<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> : NativeActivity
     {
         public InvokeAction()
@@ -1085,7 +1086,7 @@ namespace CoreWf.Statements
         }
     }
 
-    //[ContentProperty("Action")]
+    [ContentProperty("Action")]
     public sealed class InvokeAction<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12> : NativeActivity
     {
         public InvokeAction()
@@ -1235,7 +1236,7 @@ namespace CoreWf.Statements
         }
     }
 
-    //[ContentProperty("Action")]
+    [ContentProperty("Action")]
     public sealed class InvokeAction<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> : NativeActivity
     {
         public InvokeAction()
@@ -1394,7 +1395,7 @@ namespace CoreWf.Statements
         }
     }
 
-    //[ContentProperty("Action")]
+    [ContentProperty("Action")]
     public sealed class InvokeAction<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14> : NativeActivity
     {
         public InvokeAction()
@@ -1562,7 +1563,7 @@ namespace CoreWf.Statements
         }
     }
 
-    //[ContentProperty("Action")]
+    [ContentProperty("Action")]
     public sealed class InvokeAction<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> : NativeActivity
     {
         public InvokeAction()
@@ -1739,7 +1740,7 @@ namespace CoreWf.Statements
         }
     }
 
-    //[ContentProperty("Action")]
+    [ContentProperty("Action")]
     public sealed class InvokeAction<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16> : NativeActivity
     {
         public InvokeAction()

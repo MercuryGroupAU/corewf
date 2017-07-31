@@ -136,14 +136,14 @@ namespace CoreWf
             }
         }
 
-        //public void SetImportedChildrenCollection(Collection<Activity> importedChildren)
-        //{
-        //    ThrowIfDisposed();
+        public void SetImportedChildrenCollection(Collection<Activity> importedChildren)
+        {
+            ThrowIfDisposed();
 
-        //    ActivityUtilities.RemoveNulls(importedChildren);
+            ActivityUtilities.RemoveNulls(importedChildren);
 
-        //    this.activity.SetImportedChildrenCollection(importedChildren);
-        //}
+            this._activity.SetImportedChildrenCollection(importedChildren);
+        }
 
         public void AddImportedChild(Activity importedChild)
         {
@@ -229,25 +229,25 @@ namespace CoreWf
             }
         }
 
-        //public Collection<RuntimeArgument> GetArgumentsWithReflection()
-        //{
-        //    return Activity.ReflectedInformation.GetArguments(this.activity);
-        //}
+        public Collection<RuntimeArgument> GetArgumentsWithReflection()
+        {
+            return Activity.ReflectedInformation.GetArguments(this._activity);
+        }
 
-        //public Collection<Activity> GetImportedChildrenWithReflection()
-        //{
-        //    return Activity.ReflectedInformation.GetChildren(this.activity);
-        //}
+        public Collection<Activity> GetImportedChildrenWithReflection()
+        {
+            return Activity.ReflectedInformation.GetChildren(this._activity);
+        }
 
-        //public Collection<Variable> GetVariablesWithReflection()
-        //{
-        //    return Activity.ReflectedInformation.GetVariables(this.activity);
-        //}
+        public Collection<Variable> GetVariablesWithReflection()
+        {
+            return Activity.ReflectedInformation.GetVariables(this._activity);
+        }
 
-        //public Collection<ActivityDelegate> GetImportedDelegatesWithReflection()
-        //{
-        //    return Activity.ReflectedInformation.GetDelegates(this.activity);
-        //}
+        public Collection<ActivityDelegate> GetImportedDelegatesWithReflection()
+        {
+            return Activity.ReflectedInformation.GetDelegates(this._activity);
+        }
 
         public void AddDefaultExtensionProvider<T>(Func<T> extensionProvider)
             where T : class

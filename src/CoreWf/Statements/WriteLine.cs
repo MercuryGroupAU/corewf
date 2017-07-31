@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using CoreWf.Runtime;
+using Portable.Xaml.Markup;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -9,7 +10,7 @@ using System.IO;
 
 namespace CoreWf.Statements
 {
-    //[ContentProperty("Text")]
+    [ContentProperty("Text")]
     public sealed class WriteLine : CodeActivity
     {
         public WriteLine()

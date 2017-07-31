@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using CoreWf.Runtime;
+using Portable.Xaml.Markup;
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -11,7 +12,7 @@ using System.Text.RegularExpressions;
 namespace CoreWf.Expressions
 {
     [DebuggerStepThrough]
-    //[ContentProperty("Value")]
+    [ContentProperty("Value")]
     public sealed class Literal<T> : CodeActivity<T>, IExpressionContainer/*, IValueSerializableExpression*/
     {
         private static Regex s_expressionEscapeRegex = new Regex(@"^(%*\[)");

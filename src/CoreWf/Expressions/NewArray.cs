@@ -2,13 +2,14 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using CoreWf.Runtime.Collections;
+using Portable.Xaml.Markup;
 using System;
 using System.Collections.ObjectModel;
 using System.Reflection;
 
 namespace CoreWf.Expressions
 {
-    //[ContentProperty("Bounds")]
+    [ContentProperty("Bounds")]
     public sealed class NewArray<TResult> : CodeActivity<TResult>
     {
         private Collection<Argument> _bounds;

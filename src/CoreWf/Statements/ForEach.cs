@@ -2,13 +2,14 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using CoreWf.Runtime;
+using Portable.Xaml.Markup;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 
 namespace CoreWf.Statements
 {
-    //[ContentProperty("Body")]
+    [ContentProperty("Body")]
     public sealed class ForEach<T> : NativeActivity
     {
         private Variable<IEnumerator<T>> _valueEnumerator;

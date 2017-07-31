@@ -1,6 +1,7 @@
 // Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using Portable.Xaml.Markup;
 using System;
 using System.ComponentModel;
 
@@ -22,7 +23,7 @@ namespace CoreWf.Statements
         internal abstract void ScheduleAction(NativeActivityContext context, Exception exception, CompletionCallback completionCallback, FaultCallback faultCallback);
     }
 
-    //[ContentProperty("Action")]
+    [ContentProperty("Action")]
     //[SuppressMessage(FxCop.Category.Naming, FxCop.Rule.IdentifiersShouldNotMatchKeywords, //Justification = "Optimizing for XAML naming. VB imperative users will [] qualify (e.g. New [Catch](Of Exception))")]
     public sealed class Catch<TException> : Catch
         where TException : Exception

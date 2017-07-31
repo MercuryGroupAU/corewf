@@ -3,6 +3,7 @@
 
 using CoreWf.Runtime;
 using CoreWf.Runtime.Collections;
+using Portable.Xaml.Markup;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -12,7 +13,7 @@ using System.Threading;
 
 namespace CoreWf.Expressions
 {
-    //[ContentProperty("Indices")]
+    [ContentProperty("Indices")]
     public sealed class IndexerReference<TOperand, TItem> : CodeActivity<Location<TItem>>
     {
         private Collection<InArgument> _indices;

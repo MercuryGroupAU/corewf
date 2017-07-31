@@ -69,8 +69,10 @@ namespace Samples
             set { throw new NotSupportedException(); }
         }
 
-        protected override void CacheMetadata(ActivityMetadata metadata)
+        /* Removed because CahceMetadata is autoimplemented
+         * protected override void CacheMetadata(ActivityMetadata metadata)
         {
+            
             var runtimeArguments = new Collection<RuntimeArgument>();
             runtimeArguments.Add(new RuntimeArgument("GuessNumber", typeof(int), ArgumentDirection.In, true));
             runtimeArguments.Add(new RuntimeArgument("Turns", typeof(int), ArgumentDirection.Out));
@@ -78,7 +80,8 @@ namespace Samples
             metadata.Bind(this.Turns, runtimeArguments[1]);
 
             metadata.SetArgumentsCollection(runtimeArguments);
-        }
+            
+        }*/
     }
 
     public sealed class Prompt : Activity<int>

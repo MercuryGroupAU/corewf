@@ -4,6 +4,7 @@
 using CoreWf.Runtime;
 using CoreWf.Runtime.Collections;
 using CoreWf.Validation;
+using Portable.Xaml.Markup;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -15,7 +16,7 @@ namespace CoreWf.Statements
     /// <summary>
     /// This class represents a StateMachine which contains States and Variables.
     /// </summary>
-    //[ContentProperty("States")]
+    [ContentProperty("States")]
     public sealed class StateMachine : NativeActivity
     {
         // internal Id of StateMachine. it's a constant value and states of state machine will generate their ids based on this root id.
@@ -68,7 +69,7 @@ namespace CoreWf.Statements
         /// <summary>
         /// Gets all root level States in the StateMachine.
         /// </summary>
-        //[DependsOn("InitialState")]
+        [DependsOn("InitialState")]
         public Collection<State> States
         {
             get
@@ -95,7 +96,7 @@ namespace CoreWf.Statements
         /// <summary>
         /// Gets Variables which can be used within StateMachine scope.
         /// </summary>
-        //[DependsOn("States")]
+        [DependsOn("States")]
         public Collection<Variable> Variables
         {
             get

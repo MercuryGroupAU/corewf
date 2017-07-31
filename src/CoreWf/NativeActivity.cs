@@ -31,7 +31,7 @@ namespace CoreWf
 
         [IgnoreDataMember]
         [Fx.Tag.KnownXamlExternal]
-        protected sealed override Func<Activity> Implementation
+        public sealed override Func<Activity> Implementation
         {
             get
             {
@@ -89,17 +89,16 @@ namespace CoreWf
             throw CoreWf.Internals.FxTrace.Exception.AsError(new InvalidOperationException(SR.WrongCacheMetadataForNativeActivity));
         }
 
-        //protected virtual void CacheMetadata(NativeActivityMetadata metadata)
-        //{
-        //    ReflectedInformation information = new ReflectedInformation(this);
+        protected virtual void CacheMetadata(NativeActivityMetadata metadata)
+        {
+            ReflectedInformation information = new ReflectedInformation(this);
 
-        //    // We bypass the metadata structure to avoid the checks for null entries
-        //    SetArgumentsCollection(information.GetArguments(), metadata.CreateEmptyBindings);
-        //    SetChildrenCollection(information.GetChildren());
-        //    SetDelegatesCollection(information.GetDelegates());
-        //    SetVariablesCollection(information.GetVariables());
-        //}
-        protected abstract void CacheMetadata(NativeActivityMetadata metadata);
+            // We bypass the metadata structure to avoid the checks for null entries
+            SetArgumentsCollection(information.GetArguments(), metadata.CreateEmptyBindings);
+            SetChildrenCollection(information.GetChildren());
+            SetDelegatesCollection(information.GetDelegates());
+            SetVariablesCollection(information.GetVariables());
+        }
 
         //internal sealed override void OnInternalCreateDynamicUpdateMap(DynamicUpdateMapBuilder.Finalizer finalizer, 
         //    DynamicUpdateMapBuilder.IDefinitionMatcher matcher, Activity originalActivity)
@@ -218,7 +217,7 @@ namespace CoreWf
 
         [IgnoreDataMember]
         [Fx.Tag.KnownXamlExternal]
-        protected sealed override Func<Activity> Implementation
+        public sealed override Func<Activity> Implementation
         {
             get
             {
@@ -276,17 +275,16 @@ namespace CoreWf
             throw CoreWf.Internals.FxTrace.Exception.AsError(new InvalidOperationException(SR.WrongCacheMetadataForNativeActivity));
         }
 
-        //protected virtual void CacheMetadata(NativeActivityMetadata metadata)
-        //{
-        //    ReflectedInformation information = new ReflectedInformation(this);
+        protected virtual void CacheMetadata(NativeActivityMetadata metadata)
+        {
+            ReflectedInformation information = new ReflectedInformation(this);
 
-        //    // We bypass the metadata structure to avoid the checks for null entries
-        //    SetArgumentsCollection(information.GetArguments(), metadata.CreateEmptyBindings);
-        //    SetChildrenCollection(information.GetChildren());
-        //    SetDelegatesCollection(information.GetDelegates());
-        //    SetVariablesCollection(information.GetVariables());
-        //}
-        protected abstract void CacheMetadata(NativeActivityMetadata metadata);
+            // We bypass the metadata structure to avoid the checks for null entries
+            SetArgumentsCollection(information.GetArguments(), metadata.CreateEmptyBindings);
+            SetChildrenCollection(information.GetChildren());
+            SetDelegatesCollection(information.GetDelegates());
+            SetVariablesCollection(information.GetVariables());
+        }
 
         //internal sealed override void OnInternalCreateDynamicUpdateMap(DynamicUpdateMapBuilder.Finalizer finalizer,
         //    DynamicUpdateMapBuilder.IDefinitionMatcher matcher, Activity originalActivity)

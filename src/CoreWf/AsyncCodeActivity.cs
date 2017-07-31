@@ -32,7 +32,7 @@ namespace CoreWf
 
         [IgnoreDataMember]
         [Fx.Tag.KnownXamlExternal]
-        protected sealed override Func<Activity> Implementation
+        public sealed override Func<Activity> Implementation
         {
             get
             {
@@ -202,13 +202,11 @@ namespace CoreWf
             throw CoreWf.Internals.FxTrace.Exception.AsError(new InvalidOperationException(SR.WrongCacheMetadataForCodeActivity));
         }
 
-        //protected virtual void CacheMetadata(CodeActivityMetadata metadata)
-        //{
-        //    // We bypass the metadata call to avoid the null checks
-        //    SetArgumentsCollection(ReflectedInformation.GetArguments(this), metadata.CreateEmptyBindings);
-        //}
-
-        protected abstract void CacheMetadata(CodeActivityMetadata metadata);
+        protected virtual void CacheMetadata(CodeActivityMetadata metadata)
+        {
+            // We bypass the metadata call to avoid the null checks
+            SetArgumentsCollection(ReflectedInformation.GetArguments(this), metadata.CreateEmptyBindings);
+        }
 
         private class CompleteAsyncCodeActivityData : AsyncOperationContext.CompleteData
         {
@@ -319,7 +317,7 @@ namespace CoreWf
 
         [IgnoreDataMember]
         [Fx.Tag.KnownXamlExternal]
-        protected sealed override Func<Activity> Implementation
+        public sealed override Func<Activity> Implementation
         {
             get
             {
@@ -459,11 +457,10 @@ namespace CoreWf
             throw CoreWf.Internals.FxTrace.Exception.AsError(new InvalidOperationException(SR.WrongCacheMetadataForCodeActivity));
         }
 
-        //protected virtual void CacheMetadata(CodeActivityMetadata metadata)
-        //{
-        //    // We bypass the metadata call to avoid the null checks
-        //    SetArgumentsCollection(ReflectedInformation.GetArguments(this), metadata.CreateEmptyBindings);
-        //}
-        protected abstract void CacheMetadata(CodeActivityMetadata metadata);
+        protected virtual void CacheMetadata(CodeActivityMetadata metadata)
+        {
+            // We bypass the metadata call to avoid the null checks
+            SetArgumentsCollection(ReflectedInformation.GetArguments(this), metadata.CreateEmptyBindings);
+        }
     }
 }

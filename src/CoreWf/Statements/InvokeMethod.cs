@@ -4,6 +4,7 @@
 using CoreWf.Expressions;
 using CoreWf.Runtime;
 using CoreWf.Runtime.Collections;
+using Portable.Xaml.Markup;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -12,7 +13,7 @@ using System.Threading;
 
 namespace CoreWf.Statements
 {
-    //[ContentProperty("Parameters")]
+    [ContentProperty("Parameters")]
     public sealed class InvokeMethod : AsyncCodeActivity
     {
         private Collection<Argument> _parameters;

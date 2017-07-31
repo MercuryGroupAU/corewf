@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using CoreWf.Runtime.Collections;
+using Portable.Xaml.Markup;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -10,7 +11,7 @@ using System.Linq.Expressions;
 
 namespace CoreWf.Statements
 {
-    //[ContentProperty("Cases")]
+    [ContentProperty("Cases")]
     public sealed class Switch<T> : NativeActivity
     {
         private IDictionary<T, Activity> _cases;

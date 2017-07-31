@@ -1,12 +1,13 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using Portable.Xaml.Markup;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 
 namespace CoreWf.Expressions
 {
-    //[ContentProperty("Func")]
+    [ContentProperty("Func")]
     public sealed class InvokeFunc<TResult> : NativeActivity<TResult>
     {
         public InvokeFunc()
@@ -48,7 +49,7 @@ namespace CoreWf.Expressions
         }
     }
 
-    //[ContentProperty("Func")]
+    [ContentProperty("Func")]
     public sealed class InvokeFunc<T, TResult> : NativeActivity<TResult>
     {
         public InvokeFunc()
@@ -106,7 +107,7 @@ namespace CoreWf.Expressions
         }
     }
 
-    //[ContentProperty("Func")]
+    [ContentProperty("Func")]
     public sealed class InvokeFunc<T1, T2, TResult> : NativeActivity<TResult>
     {
         public InvokeFunc()
@@ -174,7 +175,7 @@ namespace CoreWf.Expressions
         }
     }
 
-    //[ContentProperty("Func")]
+    [ContentProperty("Func")]
     public sealed class InvokeFunc<T1, T2, T3, TResult> : NativeActivity<TResult>
     {
         public InvokeFunc()
@@ -252,7 +253,7 @@ namespace CoreWf.Expressions
         }
     }
 
-    //[ContentProperty("Func")]
+    [ContentProperty("Func")]
     public sealed class InvokeFunc<T1, T2, T3, T4, TResult> : NativeActivity<TResult>
     {
         public InvokeFunc()
@@ -340,7 +341,7 @@ namespace CoreWf.Expressions
         }
     }
 
-    //[ContentProperty("Func")]
+    [ContentProperty("Func")]
     public sealed class InvokeFunc<T1, T2, T3, T4, T5, TResult> : NativeActivity<TResult>
     {
         public InvokeFunc()
@@ -434,7 +435,7 @@ namespace CoreWf.Expressions
         }
     }
 
-    //[ContentProperty("Func")]
+    [ContentProperty("Func")]
     public sealed class InvokeFunc<T1, T2, T3, T4, T5, T6, TResult> : NativeActivity<TResult>
     {
         public InvokeFunc()
@@ -537,7 +538,7 @@ namespace CoreWf.Expressions
         }
     }
 
-    //[ContentProperty("Func")]
+    [ContentProperty("Func")]
     public sealed class InvokeFunc<T1, T2, T3, T4, T5, T6, T7, TResult> : NativeActivity<TResult>
     {
         public InvokeFunc()
@@ -649,7 +650,7 @@ namespace CoreWf.Expressions
         }
     }
 
-    //[ContentProperty("Func")]
+    [ContentProperty("Func")]
     public sealed class InvokeFunc<T1, T2, T3, T4, T5, T6, T7, T8, TResult> : NativeActivity<TResult>
     {
         public InvokeFunc()
@@ -771,7 +772,7 @@ namespace CoreWf.Expressions
         }
     }
 
-    //[ContentProperty("Func")]
+    [ContentProperty("Func")]
     public sealed class InvokeFunc<T1, T2, T3, T4, T5, T6, T7, T8, T9, TResult> : NativeActivity<TResult>
     {
         public InvokeFunc()
@@ -902,7 +903,7 @@ namespace CoreWf.Expressions
         }
     }
 
-    //[ContentProperty("Func")]
+    [ContentProperty("Func")]
     public sealed class InvokeFunc<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, TResult> : NativeActivity<TResult>
     {
         public InvokeFunc()
@@ -1042,7 +1043,7 @@ namespace CoreWf.Expressions
         }
     }
 
-    //[ContentProperty("Func")]
+    [ContentProperty("Func")]
     public sealed class InvokeFunc<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, TResult> : NativeActivity<TResult>
     {
         public InvokeFunc()
@@ -1191,7 +1192,7 @@ namespace CoreWf.Expressions
         }
     }
 
-    //[ContentProperty("Func")]
+    [ContentProperty("Func")]
     public sealed class InvokeFunc<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, TResult> : NativeActivity<TResult>
     {
         public InvokeFunc()
@@ -1350,7 +1351,7 @@ namespace CoreWf.Expressions
         }
     }
 
-    //[ContentProperty("Func")]
+    [ContentProperty("Func")]
     public sealed class InvokeFunc<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, TResult> : NativeActivity<TResult>
     {
         public InvokeFunc()
@@ -1518,7 +1519,7 @@ namespace CoreWf.Expressions
         }
     }
 
-    //[ContentProperty("Func")]
+    [ContentProperty("Func")]
     public sealed class InvokeFunc<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, TResult> : NativeActivity<TResult>
     {
         public InvokeFunc()
@@ -1695,7 +1696,7 @@ namespace CoreWf.Expressions
         }
     }
 
-    //[ContentProperty("Func")]
+    [ContentProperty("Func")]
     public sealed class InvokeFunc<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, TResult> : NativeActivity<TResult>
     {
         public InvokeFunc()
@@ -1881,7 +1882,7 @@ namespace CoreWf.Expressions
         }
     }
 
-    //[ContentProperty("Func")]
+    [ContentProperty("Func")]
     public sealed class InvokeFunc<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, TResult> : NativeActivity<TResult>
     {
         public InvokeFunc()
